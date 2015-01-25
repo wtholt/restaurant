@@ -1,0 +1,17 @@
+<h1>Restaurant</h1>
+
+<%= link_to "New Menu", new_menu_path %>
+<br>
+<% @menus.each do |menu| %>
+  <br>
+  <%= link_to "Menu Info", menu_path(menu) %>
+  <br>
+  <%= menu.name %>
+  <br>
+  <%= menu.description %>
+  <br>
+  <%= link_to "Edit Menu", edit_menu_path(menu) %>
+  <br>
+  <%= link_to "Delete Menu", menu_path(menu), method: :delete %>
+  <br>
+<% end %>
